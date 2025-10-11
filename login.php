@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "config/db_connect.php";
+include 'config/db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -36,3 +36,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
+
