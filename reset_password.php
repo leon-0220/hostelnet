@@ -1,5 +1,5 @@
 <?php
-include "php/db_connect.php";
+include 'config/db_connect.php';
 
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
@@ -49,4 +49,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
   </div>
 </body>
+
 </html>
