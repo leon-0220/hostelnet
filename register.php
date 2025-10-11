@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include 'config/db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST['username']);
@@ -14,9 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $username, $hashedPassword, $role);
 
     if ($stmt->execute()) {
-        echo "<script>alert('✅ Pendaftaran berjaya!'); window.location.href='login.html';</script>";
+        echo "<script>alert('✅ Pendaftaran berjaya!'); window.location.href='index.html';</script>";
     } else {
         echo "<script>alert('❌ Username sudah wujud'); window.location.href='register.html';</script>";
     }
 }
+
 ?>
