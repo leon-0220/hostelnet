@@ -1,9 +1,9 @@
 <?php
-$host = "mainline.proxy.rlwy.net";
+$host = "trolley.proxy.rlwy.net";
 $user = "root";
-$pass = "TXxFspcFHvInuOcbERQyMAqiZFlRaOUd"; 
-$db = "railway db";
-$port = "44574";
+$pass = "HdmIDiTCnwbfpVfzujxZEfTmhgGkbnlA"; 
+$db = "railway db1";
+$port = "28476";
 
 $conn = mysqli_connect($servername, $user, $pass, $dbname);
 
@@ -12,4 +12,5 @@ if (!$conn) {
 } else {
     echo "Connected successfully!";
 }
+
 ?>
