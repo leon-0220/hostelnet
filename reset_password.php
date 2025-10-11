@@ -1,12 +1,12 @@
 <?php
-include "../../php/db_connect.php";
+include "include config/db_connect.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $token = $_POST['token'];
     $password = $_POST['password'];
 
     if (empty($token) || empty($password)) {
-        echo "<script>alert('Invalid request!'); window.location.href='../../forgot_password.html';</script>";
+        echo "<script>alert('Invalid request!'); window.location.href='forgot_password.html';</script>";
         exit;
     }
 
@@ -24,9 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         mysqli_query($conn, "DELETE FROM password_resets WHERE email = '$email'");
 
-        echo "<script>alert('Password has been reset successfully! Please log in again.'); window.location.href='../../login.html';</script>";
+        echo "<script>alert('Password has been reset successfully! Please log in again.'); window.location.href='index.html';</script>";
     } else {
-        echo "<script>alert('Invalid or expired token.'); window.location.href='../../forgot_password.html';</script>";
+        echo "<script>alert('Invalid or expired token.'); window.location.href='forgot_password.html';</script>";
     }
 }
+
 ?>
