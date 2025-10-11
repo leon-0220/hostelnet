@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../config/db_connect.php'; // adjust ikut lokasi fail
+include '../php/config/db_connect.php'; // adjust ikut lokasi fail
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -43,3 +43,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
